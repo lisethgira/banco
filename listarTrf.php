@@ -1,7 +1,7 @@
 <?php
-    $usuario = $_REQUEST['usuario'];
+    
     if (isset($_REQUEST['usuario']))
-    {        
+    {   $usuario = $_REQUEST['usuario'];
         $cnx =  mysqli_connect("localhost","root","","bdbanco");//(dir IP servidor, usuario, clave, nombre de la bd)
         mysqli_query($cnx,"SET NAMES 'utf8'");
         $Cta = mysqli_fetch_array(mysqli_query($cnx, "SELECT Nrocuenta from cuenta where usuario = '$usuario'"));        

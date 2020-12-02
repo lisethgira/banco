@@ -27,4 +27,5 @@ else
 }
 echo $rta;
 mysqli_close($cnx);
+return $rta;
 ?> 
